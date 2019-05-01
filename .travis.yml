@@ -1,0 +1,12 @@
+sudo: false
+language: python
+python:
+- '3.4'
+branch:
+  - master
+before_install:
+  - chmod +x build.sh
+  - sudo apt-get update -qq
+  - sudo apt-get install -y pandoc
+script:
+  - sh build.sh
